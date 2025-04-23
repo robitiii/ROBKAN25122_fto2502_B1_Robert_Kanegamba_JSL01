@@ -2,6 +2,8 @@
     padding:0;
     margin:0;
     border:none;
+    box-sizing: border-box;
+    
 }
 body{
     max-width:1440px;
@@ -16,7 +18,7 @@ body{
 .nav-bar{
     width:100%;
     max-height:100vh;
-    /* padding:1rem; */
+    padding:1rem;
 }
 .nav-bar img,h1 ,h4, button {
     margin-top:15px;
@@ -42,11 +44,12 @@ body{
     position:relative;
     top:30px;
 }
-
 /* lanch-career container */
 
 
 .launch-career{
+    width:100%;
+    height:100%;
     background-color:#F4F7FD;
     border-left: 2px solid #E4EBFA;
     background-color:#E4EBFA;
@@ -79,33 +82,36 @@ body{
 .launch-btn:active{
     border:5px solid pink;
 }
-.blue-dot, .green-dot, .purple-dot{
-    width:15px;
-    height:15px;
+.blue-dot{
     border-radius:50%;
-    border-color:#49C4E5;
-}
-.task-col .blue-dot{
-    border-color:#49C4E5;
-    border-radius:50%;
-    height: 25px;
-    width: 25px;
+    height: 15px;
+    width: 15px;
     display: inline-block;
+    background-color:#49C4E5;
 }
 .purple-dot{
+    border-radius:50%;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
     background-color:#8471F2;
 }
 .green-dot{
+    border-radius:50%;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
     background-color:#67E2AE;
 }
 
 .task-col {
     width:100%;
+    height:100%;
     background-color:#E4EBFA;
 }
 /* the Main container ~ Task-container*/
 main {
-    padding: 1rem 20rem 1rem 1rem;
+    padding: 1rem 20rem 3rem 1rem;
     display:flex;
     justify-content:space-between;
     gap:2rem;
@@ -146,32 +152,35 @@ main h4 {
 }
 /* media queries */
 
-@media(max-width:475px){
+@media(max-width:375px){
     *{
         padding:0;
     }
     body{
-        display: grid;
-        height:100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 15fr ;
+        display: block;
+        max-width:375px;
+        height:fit-content;
+        margin:0 auto;
        
     }
     .nav-bar h1 , .launch-btn, .all-boards{
         display:none;
     }
     .launch-career h2{
-        max-width:400px;
+        max-width:250px;
         position:relative;
         bottom:60px;
         left:40px;
     }
-    .main{
-        max-width:475px;
+    main{
+        position:relative;
+        bottom:40px;
+        max-width:100%;
+        padding:0 2rem 2rem .5rem;
         display:flex;
         flex-direction:column;
         justify-items:center;
-        overflow:hidden;
     }
+    
     
 }
