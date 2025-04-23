@@ -1,0 +1,177 @@
+*{
+    padding:0;
+    margin:0;
+    border:none;
+}
+body{
+    max-width:1440px;
+    max-height:1024px;
+    background-color:#F4F7FD;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+/* the nav kanban bar */
+.nav-bar{
+    width:100%;
+    max-height:100vh;
+    /* padding:1rem; */
+}
+.nav-bar img,h1 ,h4, button {
+    margin-top:15px;
+    background-color:#F4F7FD;
+}
+.nav-bar h1{
+    display:inline-block;
+    font-size:35px;
+}
+.nav-bar img {
+    display:inline-block;
+    max-width:24px;
+    max-height:25px;
+}
+.nav-bar h4{
+    font-size:16px;
+    color:#828FA3;
+    margin-left:45px;
+
+}
+.all-boards{
+    width:fit-content;
+    position:relative;
+    top:30px;
+}
+
+/* lanch-career container */
+
+
+.launch-career{
+    background-color:#F4F7FD;
+    border-left: 2px solid #E4EBFA;
+    background-color:#E4EBFA;
+}
+.launch-career h2 {
+    width:100%;
+    max-height:97px;
+    padding:1rem;
+    background-color:#F4F7FD;
+    
+}
+.launch-career h4 {
+    background-color:#E4EBFA;
+    color:#828FA3;
+}
+.launch-btn{
+    width:246px;
+    height:48px;
+    border-radius:29.09px;
+    background-color:#8471F2;
+    color:#F4F7FD;
+    font-weight:bold;
+    cursor: pointer;
+}
+.launch-btn:hover{
+    width:244px;
+    border:5px solid #E4EBFA;
+    transition: width 2s;
+}
+.launch-btn:active{
+    border:5px solid pink;
+}
+.blue-dot, .green-dot, .purple-dot{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    border-color:#49C4E5;
+}
+.task-col .blue-dot{
+    border-color:#49C4E5;
+    border-radius:50%;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+}
+.purple-dot{
+    background-color:#8471F2;
+}
+.green-dot{
+    background-color:#67E2AE;
+}
+
+.task-col {
+    width:100%;
+    background-color:#E4EBFA;
+}
+/* the Main container ~ Task-container*/
+main {
+    padding: 1rem 20rem 1rem 1rem;
+    display:flex;
+    justify-content:space-between;
+    gap:2rem;
+
+}
+main h4 {
+    display:inline-block;
+}
+.card-1,.card-2,.card-3{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    font-weight: bold;
+    justify-content:start;
+    border-radius:8px;
+    padding: 0 0 0 1rem;
+    box-shadow: 3px 3px 7px;
+    width:280px;
+    height:60px;
+    background-color:#F4F7FD;
+    margin-top:30px;
+    cursor: pointer;
+}
+.card-3:hover{
+    width:270px;
+    border: 3px solid #8471F2;
+    color:black;
+}
+.card-2:hover{
+    width:270px;
+    border: 3px solid #8471F2;
+    color:black;
+}
+.card-1:hover{
+    width:270px;
+    border: 3px solid #8471F2;
+    color:black;
+}
+/* media queries */
+
+@media(max-width:475px){
+    *{
+        padding:0;
+    }
+    body{
+        display: grid;
+        height:100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 15fr ;
+       
+    }
+    .nav-bar h1 , .launch-btn, .all-boards{
+        display:none;
+    }
+    .launch-career h2{
+        max-width:400px;
+        position:relative;
+        bottom:60px;
+        left:40px;
+    }
+    .main{
+        max-width:475px;
+        display:flex;
+        flex-direction:column;
+        justify-items:center;
+        overflow:hidden;
+    }
+    
+}
